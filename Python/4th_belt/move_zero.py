@@ -1,19 +1,33 @@
-# Question: Move all zeroes to the end of the array while keeping the order of non-zero elements.
-# Add your solution here.
+# Question:
+# Given an array of integers, move all zeroes to the end while keeping the relative order of non-zero elements.
+#
+# Input:
+# The first line contains an integer n.
+# The second line contains n integers.
+#
+# Output:
+# Print the array after moving all zeroes to the end.
 
 from typing import List
 
-def move_zeroes(arr: List[int]) -> None:
+
+def move_zeroes(arr: List[int]) -> List[int]:
     write_index = 0
-    
-    for i in range(len(arr)):
-        if arr[i] != 0:
-            # Swap the non-zero element with the element at write_index
-            arr[i], arr[write_index] = arr[write_index], arr[i]
+
+    for value in arr:
+        if value != 0:
+            arr[write_index] = value
             write_index += 1
+
+    while write_index < len(arr):
+        arr[write_index] = 0
+        write_index += 1
+
+    return arr
+
 
 if __name__ == "__main__":
     n = int(input())
     arr = list(map(int, input().split()))
-    move_zeroes(arr)
-    print(" ".join(map(str, arr)))
+    result = move_zeroes(arr)
+    print(" ".join(map(str, result)))
