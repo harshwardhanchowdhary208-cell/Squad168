@@ -1,0 +1,23 @@
+{
+  "name": "vite-vanilla-starter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "lint": "eslint .",
+    "test:serve": "vitest",
+    "test:ui": "vitest --ui",
+    "test:json": "vitest --reporter=json"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "jsdom": "^25.0.1",
+    "vite": "^6.0.6",
+    "@vitest/ui": "^2.1.8",
+    "vitest": "^2.1.8"
+  },
+  "devDependencies": {
+    "eslint": "^9.17.0"
+  }
+}
