@@ -59,7 +59,7 @@ function App() {
   Immutable
   <Greet name="Rohit" age={20}/> we can only pass string directly in props else we have to pass in {}
   Attribute
-  React is a just a libary not a full framework You must choose and integrate separate libraries for routing, state management, and API
+  React is a just a libary not a full framework which can only be used for frontend not backend.
   Component Reusability	Applications are split into small, isolated, and reusable blocks of code. This speeds up development times and makes the codebase easier to maintain.
   High Performance (Virtual DOM)	Instead of updating the browser's slow Real DOM directly, React updates a lightweight "Virtual DOM". It only re-renders the exact elements that changed, ensuring fast user experiences.
   Stable One-Way Data Flow	Data flows strictly from parent components down to child components. This downward data binding ensures that modifying child elements won't accidentally break parent data, making the system predictable and easy to debug.
