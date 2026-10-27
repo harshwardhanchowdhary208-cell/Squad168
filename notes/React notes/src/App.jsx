@@ -33,7 +33,9 @@ function App() {
   }
   function handleChange(e) {
     setText(e.target.value);
-  
+  }
+  function handleClear() {
+    setText("")
   }
   return (
     <div>
@@ -51,6 +53,7 @@ function App() {
       <h1>{text}</h1>
       {message && <p>{message}</p>}
       {showMessage && <h1>Sorry</h1>}
+      <button onClick={handleClear}>Clear</button>
       <button onClick={handleToggle}>{showMessage ? "Remove" : "Show"}</button>
       <button onClick={handleIncrement}>Increment</button>
       <button onClick={handleDecrement}>Decrement</button>
