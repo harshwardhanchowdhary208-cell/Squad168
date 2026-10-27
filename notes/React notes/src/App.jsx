@@ -5,6 +5,8 @@ function App() {
   const [showMessage, setShowMessage] = useState(true);
   const [count, setCount] = useState(0);
   const [message, setMessage] = useState("");
+  const [text, setText] = useState("");
+
 
   function handleToggle() {
     setShowMessage((prev) => !prev);
@@ -29,6 +31,10 @@ function App() {
       setMessage("Skipped multiple of 5");
     }
   }
+  function handleChange(e) {
+    setText(e.target.value);
+  
+  }
   return (
     <div>
       <h1>Hi, Harsshwadhan</h1>
@@ -41,7 +47,9 @@ function App() {
       <Greet name="Naman" squad={169} />
 
       <h1>{count}</h1>
-      {message && <p role="status">{message}</p>}
+      <input type="text" value={text} onChange={handleChange}/>
+      <h1>{text}</h1>
+      {message && <p>{message}</p>}
       {showMessage && <h1>Sorry</h1>}
       <button onClick={handleToggle}>{showMessage ? "Remove" : "Show"}</button>
       <button onClick={handleIncrement}>Increment</button>
@@ -59,7 +67,7 @@ function App() {
   Immutable
   <Greet name="Rohit" age={20}/> we can only pass string directly in props else we have to pass in {}
   Attribute
-  React is a just a libary not a full framework You must choose and integrate separate libraries for routing, state management, and API
+  React is a just a libary not a full framework which can only be used for frontend not backend.
   Component Reusability	Applications are split into small, isolated, and reusable blocks of code. This speeds up development times and makes the codebase easier to maintain.
   High Performance (Virtual DOM)	Instead of updating the browser's slow Real DOM directly, React updates a lightweight "Virtual DOM". It only re-renders the exact elements that changed, ensuring fast user experiences.
   Stable One-Way Data Flow	Data flows strictly from parent components down to child components. This downward data binding ensures that modifying child elements won't accidentally break parent data, making the system predictable and easy to debug.
