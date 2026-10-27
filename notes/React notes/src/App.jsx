@@ -5,6 +5,8 @@ function App() {
   const [showMessage, setShowMessage] = useState(true);
   const [count, setCount] = useState(0);
   const [message, setMessage] = useState("");
+  const [text, setText] = useState("");
+
 
   function handleToggle() {
     setShowMessage((prev) => !prev);
@@ -29,6 +31,10 @@ function App() {
       setMessage("Skipped multiple of 5");
     }
   }
+  function handleChange(e) {
+    setText(e.target.value);
+  
+  }
   return (
     <div>
       <h1>Hi, Harsshwadhan</h1>
@@ -41,7 +47,9 @@ function App() {
       <Greet name="Naman" squad={169} />
 
       <h1>{count}</h1>
-      {message && <p role="status">{message}</p>}
+      <input type="text" value={text} onChange={handleChange}/>
+      <h1>{text}</h1>
+      {message && <p>{message}</p>}
       {showMessage && <h1>Sorry</h1>}
       <button onClick={handleToggle}>{showMessage ? "Remove" : "Show"}</button>
       <button onClick={handleIncrement}>Increment</button>
