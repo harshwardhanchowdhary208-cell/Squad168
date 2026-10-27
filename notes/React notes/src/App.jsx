@@ -49,5 +49,10 @@ function App() {
     </div>
   );
 }
-
+/**
+ * Hooks - To use React feature we have to use hooks
+ * 1.  useState - when state change then react tirgger re-render.
+ * 2 . useState return a array of two values
+ * 3. first refers a current value second value is for update the state.
+ */
 export default App;
